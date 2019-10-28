@@ -37,7 +37,7 @@
 > 4. 在视图中通过"v-自定义指令名"去使用指令
 
 ```js
- // 定义指令
+// 定义指令
 //  自定义指令是不需要加v-前缀的
 // 第二个参数为一个对象  对象中要实现 inserted的方法
 // inserted中的参数为当前指令所在元素的dom对象
@@ -375,14 +375,15 @@ Vue.directive("focus", {
 > - 在npm 中引入axios文件
 >
 > - ```js
->   axios.get(url).then((res) => {
->   // 请求成功 会来到这  res响应体
->   }).catch((err) => {
->   // 请求失败 会来到这 处理err对象
->   })	
->   ```
->
-> ```js
+> axios.get(url).then((res) => {
+> // 请求成功 会来到这  res响应体
+> }).catch((err) => {
+> // 请求失败 会来到这 处理err对象
+> 	})	
+> 	```
+> ```
+> 
+> ​```js
 > axios.get('http://localhost:3000/brands')
 > .then(res => {
 > console.log(res.data);

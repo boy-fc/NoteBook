@@ -19,18 +19,16 @@ WebAPI 简介
 
 # DOM
 
-## 	1. DOM简介
+## 	DOM简介
 
-​                      **2.1.1简介**：DOM - document object model - 文档对象模型
-​		              文档对象模型：其实就是一个 `树` 形结构 ，把整个树状的模型
-​			      节点：树形结构里面的每个交叉点（标签），被称为 `节点`  ，也叫DOM节点
-​			      我们现在认知的节点包括： 标签本身
-​			            				      标签上的属性（src、id、class、style等）
-​									  标签内文本
+​            **2.1.1简介**：DOM - document object model - 文档对象模型
+​		      文档对象模型：其实就是一个 `树` 形结构 ，把整个树状的模型
+​			   节点：树形结构里面的每个交叉点（标签），被称为 `节点`  ，也叫DOM节点
+​			    我们现在认知的节点包括： 标签本身、标签上的属性（src、id、class、style等）、标签内文本
 
-## 	2. 获取元素对象
+## 	获取元素对象
 
-### 		     2.1 ById
+### 		     ById
 
 ​              元素对象：DOM节点
 ​              语法：后面要传入元素的ID的字符串
@@ -43,7 +41,7 @@ WebAPI 简介
 ​             若是没有找到这个标签，返回为null， null对象类型，代表空
 ​             获取body，因为body比较特别；永远只有一个 document.body
 
-###       2.2  ByTagName
+###       ByTagName
 
 ​		根据标签名获取元素
 
@@ -57,7 +55,7 @@ WebAPI 简介
 	  document.getElementsByTagName(tagname)；
 ```
 
-###      2.3  ByClassName
+###      ByClassName
 
 ​		根据元素类名获取元素
 
@@ -72,7 +70,7 @@ WebAPI 简介
 	  document.getElementsByClassName(classname)
 ```
 
-###      2.4  选择器
+###      选择器
 
 ```js
 	  document.querySelector(css选择器);
@@ -83,7 +81,7 @@ WebAPI 简介
 	  //返回值：伪数组；for，但是这个伪数组上面有forEach方法
 ```
 
-## 3.获取元素对象-offset
+## 获取元素对象-offset
 
 ​		**元素.offsetLeft**
 
@@ -139,9 +137,9 @@ WebAPI 简介
  			 });
 ```
 
-## 4. 事件
+## 事件
 
-### 4.1 捕获与冒泡
+### 捕获与冒泡
 
  ![](Web API总结.assets/1557457360104.png)
 
@@ -173,10 +171,10 @@ WebAPI 简介
 
 
 
-### 4.2 事件对象
+### 事件对象
 
-​	**1. 事件对象：万物皆对象，把一次事件行为也看成对象***
-​	   **对象：属性和方法的集合**
+​	**1. 事件对象：万物皆对象，把一次事件行为也看成对象
+​	      **对象：属性和方法的集合
 
 ```js
    		// 获取事件对象
@@ -214,7 +212,7 @@ WebAPI 简介
 
 ![](assets/1557474017078.png)
 
-### 4.3  事件委托、解绑
+### 事件委托、解绑
 
 ​	**1. 委托**
 ​		把事件注册在父级的元素身上
@@ -228,7 +226,7 @@ WebAPI 简介
 
 ​          	  **btn.removeEventListener('click',fn);**
 
-​	   	 **btn.onclick = null;**
+​	   	     **btn.onclick = null;**
 
 ```js
 			var btn = document.getElementById('btn');
@@ -247,9 +245,9 @@ WebAPI 简介
 			})
 ```
 
-## 5. 注册事件
+## 注册事件
 
-###     5.1注册方法
+###     注册方法
 
 ​		**1. on事件名**
 ​			本质相当于是把一个函数存储到 了 on 这个属性里面 ， 后面被重复赋值了，on的方式注册
@@ -274,7 +272,7 @@ WebAPI 简介
 ```
 
 
-###     5.2 点击事件-click
+###     点击事件-click
 
 ​		注册给谁：元素对象（DOM节点）
 
@@ -313,7 +311,7 @@ WebAPI 简介
 				  }
 ```
 
-### 5.3 鼠标事件-mouse
+### 鼠标事件-mouse
 
 ​		**.mousedown**
 
@@ -331,11 +329,11 @@ WebAPI 简介
 
 ​			当鼠标移入时触发	
 
-​                **.onmouseout**	
+​       **.onmouseout**	
 
- 			当鼠标移除时触发			
+ 		当鼠标移除时触发			
 
-### 5.4 键盘事件-keyCode
+### 键盘事件-keyCode
 
 ​	      **.onkeydown**
 
@@ -368,7 +366,7 @@ WebAPI 简介
               }
 ```
 
-### 5.5 动画事件
+### 动画事件
 
 ​	**注意**
 
@@ -376,7 +374,7 @@ WebAPI 简介
 
 ​		如果帧动画是无限次的，不会触发该事件		
 
-#### 5.5.1 transitionend
+#### transitionend
 
 ```js
 		//元素的过渡动画结束的时候触发
@@ -386,7 +384,7 @@ WebAPI 简介
 		});
 ```
 
-#### 5.5.2 animationend
+#### animationend
 
 ```js
 		//会在帧动画结束的时候触发
@@ -396,7 +394,7 @@ WebAPI 简介
 		})
 ```
 
-### 5.6 触摸事件
+### 触摸事件
 
 ​	**touchstart** 
 
@@ -436,11 +434,11 @@ WebAPI 简介
 ​		离开屏幕：touches、targetTouches没有值；changedTouches有最后离开屏幕的值			
 ​		
 
-## 6. 属性
+## 属性
 
-###     6.1类样式对象
+###     类样式对象
 
-####   	1. -className
+####   		-className
 
 ​			操作谁：元素对象，DOM节点
 ​			类样式是什么：DOM节点上的class属性
@@ -463,7 +461,7 @@ WebAPI 简介
 		   box.className += '新的类名';
 ```
 
-#### 	2. -classList
+#### 	-classList
 
 ​			classList：DOM元素对象的一个属性对象；管理着所有类名
 ​			对象：提供多个方法进行操作，操作更为简单；比较好的方式解决上面的覆盖问题
@@ -489,12 +487,12 @@ WebAPI 简介
 		  box.classList.toggle(类名
 ```
 
-### 6.2标准属性
+### 标准属性
 
-#### 	1.style
+#### 	style
 
 ​		style属性里面的内容其实是多个键值对，js帮我们把它们以对象的方式管理起来
-​		获取：只需要元素对象.style.样式属性名 ；如果样式属性名是多个单词的，需要把样式属性的`-` 去掉，			   修改为驼峰命名
+​		获取：只需要元素对象.style.样式属性名 ；如果样式属性名是多个单词的，需要把样式属性的`-` 去掉，修改为驼峰命名
 
 ```js
 	  // 获取：只能获取行内样式；
@@ -503,7 +501,7 @@ WebAPI 简介
       div.style.backgroundColor = ’#fff‘;
 ```
 
-#### 	2.focus  聚焦
+#### 	聚焦
 
 ​		有光标时：获得焦点 focus；
 
@@ -513,7 +511,7 @@ WebAPI 简介
 	  }
 ```
 
-#### 	3.blur  模糊
+#### 	blur  模糊
 
 ​		无光标时：失去焦点 blur
 
@@ -523,7 +521,7 @@ WebAPI 简介
       }
 ```
 
-#### 	4.checked  开关属性
+#### 	checked  开关属性
 
 ​	       开关属性： checked/selected/disabled ，这种只有两种状态的属性
 
@@ -607,7 +605,7 @@ WebAPI 简介
 		}
 ```
 
-### 6.3自定义属性
+### 自定义属性
 
 ​		初始化定义 比如为 data- 开头的自定义属性
 
@@ -646,7 +644,7 @@ WebAPI 简介
  			 }
 		  }
 ```
-### 6.4  操作属性
+### 操作属性
 
 ​		语法：这个操作属性更为灵活。一般情况下是操作自定义属性多一些
 
@@ -662,7 +660,7 @@ WebAPI 简介
 		//作用：删除某个属性
 ```
 
-### 6.5  修改节点
+### 修改节点
 
 ​		**innerHTML** 
 
@@ -681,7 +679,7 @@ WebAPI 简介
 		ul.innerText= '<li>狗蛋</li>';	
 ```
 
-### 6.6  获取 DOM节点
+### 获取 DOM节点
 
 ​	**获取子元素**
 
@@ -703,9 +701,9 @@ WebAPI 简介
 			元素.previousElementSibling - 得到上一个兄弟元素
 ```
 
-## 7.方法
+## 方法
 
-### 7.1 创建节点
+### 创建节点
 
 ```js
 	innerHTML
@@ -724,7 +722,7 @@ WebAPI 简介
 	//注意：该方法创建的元素，是不会自动进入结构里面的，需要自己手动添加
 ```
 
-### 7.2  添加节点
+### 添加节点
 
 ​	**元素.appendChild(子元素)**：给一个父元素，追加子元素，作为最后一个子元素；从后添加一个子元素
 
@@ -742,7 +740,7 @@ WebAPI 简介
 		ul.insertBefore(li,second);
 ```
 
-### 7.3  删除节点
+### 删除节点
 
 ​	 **父元素.removeChild(要删除的子元素);**
 
@@ -827,7 +825,7 @@ WebAPI 简介
 		}
 ```
 
-## 8.获取可是区域的宽度-client
+## 获取可是区域的宽度-client
 
 ​		元素.clientWidth - 可视区域的宽度
 
@@ -835,12 +833,12 @@ WebAPI 简介
 
 # BOM
 
-## 1.介绍
+## 介绍
 
 ​			浏览器对象：window对象
 ​	 		browser object model：是把浏览器看成是一个对象，就是学习浏览器对象的各种方法和属性
 
-## 2.window 对象
+## window 对象
 
 ​	**2.1** 所有window对象的属性和方法，都可以**直接省略 window**.，而直接使用
 
@@ -881,9 +879,9 @@ WebAPI 简介
 			  console.log(window.c);
 ```
 
-## 3.属性
+## 属性
 
-### 3.1 location
+### location
 
 ​		location：负责管理浏览器地址栏相关的行为和信息的对象
 
@@ -896,15 +894,15 @@ WebAPI 简介
 	  location.href = 'http://www.jd.com';
 ```
 
-### 3.2 localStorage
+### localStorage
 
-#### 	1. 介绍
+#### 	介绍
 
 ​			把数据进行本地储存，刷新还是操作后的样子
 
 ​			本地储存：本地指浏览器，储存指浏览器可以储存数据			
 
-#### 	2. localStorage.setItem(键,值)
+#### 	localStorage.setItem(键,值)
 
 ​			多次对一个键进行赋值，会把前面的值覆盖；
 
@@ -913,23 +911,23 @@ WebAPI 简介
 ​			注意： 如果存储的是对象之类的复杂类型，需要先把复杂类型转换为的字符串，再存进去		
 ​		
 
-#### 	3. localStorage.getItem(键)
+#### 	localStorage.getItem(键)
 
 ​			读取 数据
 
 ​			返回：我们存入的的数据的值，返回的是字符串		 
 
-#### 	4. localStorage.removeItem(键)　　
+#### 	localStorage.removeItem(键)　　
 
 ​			删除键的值
 
-#### 	5. localStorage.clear()
+#### 	localStorage.clear()
 
 ​			全部清空
 
-## 4. JSON
+## JSON
 
-### 	4.1 JSON格式
+### 	JSON格式
 
 ​			[] - 表示数组；{} - 对象；和JS学习的对象，数组特别的像
 
@@ -943,13 +941,13 @@ WebAPI 简介
 
 ​			只是记录数据		
 
-### 	4.2 JSON.stringify(对象)
+### 	JSON.stringify(对象)
 
 ​			将对象转换为json格式的字符串
 
 ​			返回值：一个满足json格式的 字符串		
 
-### 	4.3 JSON.parse(json格式字符串)
+### 	JSON.parse(json格式字符串)
 
 ​			将json格式的字符串转换为对象
 
@@ -1033,7 +1031,7 @@ WebAPI 简介
 				  //添加到全局的数组里
 			     //把全局数组进行本地储存：注意你储存数组的每一条数据先后顺序和列表初始化先后顺序要保持					一致
 ```
-## 5. 属性- 获取元素的实际宽度和高度
+## 属性- 获取元素的实际宽度和高度
 
 ​			元素的实际宽高 = border+padding+content（width和height）
 
@@ -1049,9 +1047,9 @@ WebAPI 简介
 		  元素.offsetHeight	
 ```
 
-## 6.方法
+## 方法
 
-### 6.1 onload
+### onload
 
 ​			作用：页面加载完毕的时候执行
 
@@ -1066,9 +1064,9 @@ WebAPI 简介
 			}
 ```
 
-### 6.2 定时器
+### 定时器
 
-#### 	6.2.1 setTimeout
+#### 	setTimeout
 
 ​			一次性定时器:  set - 设置；Timeout - 超时
 
@@ -1080,11 +1078,11 @@ WebAPI 简介
 		  var timer = setTimout(函数,延迟的毫秒数);	 
 ```
 
-#### 	6.2.2 clearTimeout(timer)
+#### 	clearTimeout(timer)
 
 ​			停止一次性的定时器：清除后，就不会执行这个定时器
 
-#### 	6.2.3 setInterval
+#### 	setInterval
 
 ​			永久性的定时器；interval - 间隔
 
@@ -1096,11 +1094,11 @@ WebAPI 简介
 		  var timer = setInterval(函数,间隔);	
 ```
 
-#### 	6.2.4 clearInterval(timer)
+#### 	clearInterval(timer)
 
 ​			清除永久定时器
 
-### 6.3 获取DOM节点样式
+### 获取DOM节点样式
 
 ​		Computed：计算后的样式
 

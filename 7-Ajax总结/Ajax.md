@@ -1,4 +1,4 @@
-# 1. 前言
+# 前言
 
 - 发微博案例（之前的案例）
     - 可以在输入框输入内容，点击确定，实现发布微博效果
@@ -17,9 +17,9 @@
 
 ------
 
-# 2. 服务器介绍
+# 服务器介绍
 
-## 2.1客户端和服务器
+## 客户端和服务器
 
 - 客户端：
     - 当你使用自己的计算机来访问（留言板）网站的时候，你的计算机就是客户端
@@ -28,7 +28,7 @@
     - 我们访问的所有网页都在服务器上，比如百度的页面，比如留言板页面
     - 你访问的留言板网站搭建在老师的计算机上，老师的计算机就是服务器
 
-## 2.2 什么是服务器
+## 什么是服务器
 
 - Q1：留言板这个HTML页面在你自己的计算机上吗？它在哪里？
 
@@ -65,7 +65,7 @@
 
 ------
 
-# 3. 请求响应过程
+# 请求响应过程
 
 客户端浏览器如何访问服务器
 
@@ -83,7 +83,7 @@
 
 > 有的时候，为了看到一个页面，也许会向服务器发很多次请求。
 
-# 4. 浏览器工具
+# 浏览器工具
 
 ## 4.1 查看请求基本信息
 
@@ -91,7 +91,7 @@
 
 ![1559978518612](Ajax.assets/1559978518612.png)
 
-## 4.2 请求类型(Request Type)
+## 请求类型(Request Type)
 
 通过浏览器工具，可以查看到请求的类型，我们将请求类型分为两类即可：
 
@@ -100,7 +100,7 @@
 
 ![1559978632624](Ajax.assets/1559978632624.png)
 
-## 4.3 请求方式(Request Method)
+## 请求方式(Request Method)
 
 浏览器在向服务器发送请求的时候，也分为不同的请求方式。
 
@@ -113,7 +113,7 @@
 
 ![1559979741462](Ajax.assets/1559979741462.png)
 
-## 4.4 查看响应结果(Response)
+## 查看响应结果(Response)
 
 当浏览器向服务器发送了一个请求后，服务器会根据请求，做出响应。
 
@@ -121,15 +121,15 @@
 
 ![1559980227240](Ajax.assets/1559980227240.png)
 
-# 5. 搭建服务器环境
+# 搭建服务器环境
 
-## 5.1 安装Node
+## 安装Node
 
 将下载的node软件安装（一直下一步即可）
 
 如果忘记了是否安装过node，可以先进行下一步。
 
-## 5.2 使用node运行app.js开启服务
+## 使用node运行app.js开启服务
 
 - 如何搭建web服务环境
     - 将老师发给你的 `Ajax阶段资料.zip` 解压缩，得到 `Ajax阶段资料` 文件夹。
@@ -137,7 +137,7 @@
     - 在编辑器中，在 `app.js` 上右键，选择在终端中打开
     - 在打开的终端面板中，输入 `node app.js` 回车，表示开启服务了。
 
-## 5.3 其他问题
+## 其他问题
 
 - 大家可以把 `ajax` 文件夹认为是服务器即可。
 
@@ -148,7 +148,7 @@
     - 贴合学习，安装配置简单方便
     - 内置了很多学习阶段用的数据接口 
 
-## 5.4 数据接口（测试接口）
+## 数据接口（测试接口）
 
 就是一个请求地址（网址），向这个地址发送请求，可以得到一些数据。 
 
@@ -173,7 +173,7 @@
 
 
 
-## 5.5 请求响应GET、POST
+## 请求响应GET、POST
 
 请求的方式有两种：
 
@@ -186,7 +186,7 @@
     - 表单提交（一定要设置method为POST）
     - Ajax的POST请求
 
-# 6. Ajax简介
+# Ajax简介
 
 字面意思：`A`（asynchronous）`j`（javascript）`a`（and）`x`（xml），翻译过来是 “异步的JavaScript和XML”。
 
@@ -196,7 +196,7 @@ Ajax也是一套内置在浏览器端的API，核心对象是 `XMLHttpRequest` �
 
 型的请求和收取服务器端响应的数据。
 
-## 6.1 发送 Ajax 请求
+## 发送 Ajax 请求
 
 **初体验**
 
@@ -240,7 +240,7 @@ Q2：刷新03-初体验.html 是如何看到时间戳的？
  	4. 当解析到js代码的时候，发现又是一次Ajax请求，所以又发送了Ajax请求
  	5. 服务器收到Ajax请求，然后会把时间戳返回给浏览器
 
-## 6.2 Ajax发送GET请求及简化URL
+## Ajax发送GET请求及简化URL
 
 - get 请求
 
@@ -308,7 +308,7 @@ xhr.onload = function () {
 }
 ```
 
-## 6.3 GET 请求传参
+## GET 请求传参
 
 - 什么时候需要带请求参数
 
@@ -350,7 +350,7 @@ xhr.onload = function () {
     </body>
     ```
 
-## 6.4 缓存问题(了解)
+## 缓存问题(了解)
 
 - 只有IE浏览器会有缓存问题，所以作为了解内容
 - 缓存问题指的是：两次或多次 AJAX GET 请求**同一个** URL ，IE浏览器在第二次请求的时候，并不会从新向服务器发请求，而是直接使用上次请求的结果。
@@ -397,7 +397,7 @@ console.log(this.responseText)
 }
 ```
 
-## 6.5 Ajax发送POST方式的请求
+## Ajax发送POST方式的请求
 
 post 把传递的数据封装在 HTTP 请求数据中，以键/值的形式出现，可以传输大量数据，对数据量没有限制，也不
 
@@ -457,7 +457,7 @@ xhr.onload = function () {
 
 # 案例-留言板
 
-## 1. 功能介绍及postman工具
+## 功能介绍及postman工具
 
 - 案例功能介绍
 
@@ -475,7 +475,7 @@ xhr.onload = function () {
 
     ![1560046299110](Ajax2.assets/1560046299110.png)
 
-## 2. 发送请求，获取所有留言
+## 发送请求，获取所有留言
 
 **==开发案例前的准备工作==**：
 
@@ -531,7 +531,7 @@ xhr.onload = function () {
         3. 通过拼接li的方式，拼接所有的留言
         4. 把拼接好的所有的li，放到ul中
 
-## 3. 点击按钮，发送请求，添加留言
+## 点击按钮，发送请求，添加留言
 
 > 添加完留言，要想实时看到新添加的留言，则需要在添加完成之后，从新从服务器获取所有留言。为了方便，将前面的获取留言的代码封装成 `loadData` 函数。
 
@@ -562,9 +562,9 @@ xhr.onload = function () {
     }
 ```
 
-# 7. 响应数据格式
+# 响应数据格式
 
-## 7.1 简介
+## 简介
 
 ​        服务器返回的数据不一定是非常简单的字符串，比如在获取留言板中的所有留言的时候，这时获取的数据就
 
@@ -600,9 +600,9 @@ array(
 
 其他国家人交流时需要找个翻译一样。
 
-![1560043442970](C:\Users\Administrator\Desktop\笔记整理\7-Ajax\Ajax.assets\1560043442970.png)
+![](Ajax.assets/1560043442970.png)
 
-## 7.2 JSON
+## JSON
 
 ​	JSON（JavaScript Object **Notation**：JS对象**表示法**） 是一种通过普通**==字符串==**描述数据的手段，用于表
 
@@ -610,9 +610,9 @@ array(
 
 > 别看JSON长得像JS中的各种数据，但JSON的本质是字符串。
 
-### 	7.2.1 数据类型
+### 	数据类型
 
-- ​	null
+- ​	     null
 
   ```json
   		null
@@ -666,7 +666,7 @@ array(
 
 5. 一个完整的JSON，不能有其他内容掺杂，必须是一个完整的 “数组” 或完整的 “对象”  或 完整的 字符串 或 ..........
 
-   ### 	7.2.2 JSON 数据转换
+   ### 	JSON 数据转换
 
 - JSON 格式转JS数据
   - `JS = JSON.parse(JSON)`
@@ -695,7 +695,7 @@ array(
         // console.log(JSON.parse('[]{}')); // 报错了，因为JSON格式不是一个完整的JSON
 ```
 
-## 7.3 JSON 表述
+## JSON 表述
 
 有了 JSON 这种格式，我们就可以更加容易的表示拥有复杂结构的数据了。
 
@@ -705,7 +705,7 @@ array(
 > - 不管服务端是采用 XML 还是采用 JSON 本质上都是将数据返回给客户端。
 > - 服务端应该根据响应内容的格式设置一个合理的 Content-Type。
 
-# 8. XML
+# XML
 
 HTML:超文本标记语言
 
@@ -734,13 +734,13 @@ XML: e==X==tension ==M==arkup ==L==anguage   可扩展标记语言
 
 ```
 
-XML语法规范：
+`XML语法规范：`
 
-- 和html写法差不多
-- 有且只有一个根标签
-- 标签区分大小写
-- 标签必须闭合
-- 属性值必须加引号
+- `和html写法差不多`
+- `有且只有一个根标签`
+- `标签区分大小写`
+- `标签必须闭合`
+- `属性值必须加引号`
 
 ==如果服务器返回的是XML格式的数据，JS收到数据之后，把收到的数据当做document对象来处理即可==。
 
@@ -784,25 +784,21 @@ app.get('/getXML', (req, res) => {
 
 
 
-# 9. 模板引擎
+# 模板引擎
 
-## 9.1 模板引擎介绍
+## 模板引擎介绍
 
-​	客户端中拿到请求的数据过后最常见的就是把这些数据呈现到界面上。
+​	     客户端中拿到请求的数据过后最常见的就是把这些数据呈现到界面上。
 
-​	如果数据结构简单，可以直接通过**字符串操作（拼接）**的方式处理，但是如果数据过于复杂，字符串拼接维
-
-护成本太大，就不推荐了。
+​     	如果数据结构简单，可以直接通过**字符串操作（拼接）**的方式处理，但是如果数据过于复杂，字符串拼接维护成本太大，就不推荐了。
 
 > 模板引擎：
 >
 > - artTemplate：https://aui.github.io/art-template/
 
-​	模板引擎实际上就是一个 API，模板引擎有很多种，使用方式大同小异，目的为了可以更容易更高效的将数据
+​	     模板引擎实际上就是一个 API，模板引擎有很多种，使用方式大同小异，目的为了可以更容易更高效的将数据渲染到HTML字符串中。==通俗的说，模板引擎的目的就是将服务器返回的数据显示到HTML页面中==。
 
-渲染到HTML字符串中。==通俗的说，模板引擎的目的就是将服务器返回的数据显示到HTML页面中==。
-
-## 9.2 使用模板引擎步骤
+## 使用模板引擎步骤
 
 1. 准备一个存放数据的盒子（不是必须的，使用body也可以）
 
@@ -818,7 +814,7 @@ app.get('/getXML', (req, res) => {
 
 5. 将 “拼接” 好的结果放到准备好的盒子中（不是必须的，console出来也可以看结果）
 
-   ![](C:\Users\Administrator\Desktop\笔记整理\7-Ajax\Ajax.assets\1566443384929.png)
+   ![](Ajax.assets/1566443384929.png)
 
 ```js
 <!-- 使用模板引擎-1.加载js文件 -->
@@ -852,9 +848,9 @@ app.get('/getXML', (req, res) => {
 >
 > tempalte函数语法：var html = template(模板id,  Object);
 
-## 9.3 模板语法
+## 模板语法
 
-### 	9.3.1 输出普通数据（字符串、数值等）
+### 	输出普通数据（字符串、数值等）
 
 ```js
 // 模板写法
@@ -866,7 +862,7 @@ var html = template('id', {
 });
 ```
 
-### 	9.3.2 条件
+### 	条件
 
 ```js
 // 模板写法
@@ -883,7 +879,7 @@ var html = template('id', {
 
 ```
 
-### 9.3.3 循环
+### 循环
 
 ```js
 // 模板写法
@@ -937,7 +933,7 @@ var html = template('id', {
 
 ```
 
-## 9.4 案例中使用模板引擎处理响应数据
+## 案例中使用模板引擎处理响应数据
 
 ```js
 <!-- 引入template-web.js -->
@@ -973,7 +969,7 @@ xhr.onload = function () {
 
 ```
 
-# 10. 同步与异步
+# 同步与异步
 
 *Ajax* 即“**==A==synchronous** ==J==avascript ==A==nd ==X==ML”（**异步** JavaScript 和 XML）
 
@@ -1034,11 +1030,11 @@ console.log('222')
 
 > 了解同步模式即可，切记不要使用同步模式。
 
-# 11. XHR对象其他API
+# XHR对象其他API
 
-## 11.1 readyState和onreadystatechange
+## readyState和onreadystatechange
 
-### 	11.1.1 readyState
+### 	readyState
 
 ​	既然Ajax请求是一个耗时操作，也就是从开始创建 xhr 对象，然后调用open、调用send发送请求到服务器
 
@@ -1062,7 +1058,7 @@ console.log('222')
 
 > 一般都不说Ajax请求响应的几个阶段，大多数都说Ajax的几个状态，也就是说readyState表示Ajax请求过程中的几个状态。
 
-### 11.1.2 onreadystatechange
+### onreadystatechange
 
 onload是H5之后新增的事件，在H5之前，都是使用onreadystatechange。
 
@@ -1093,7 +1089,7 @@ xhr.send('name=zhangsan&age=18');
 
 ```
 
-## 11.2 xhr对象分块接收数据
+## xhr对象分块接收数据
 
 ​	如果服务器返回的数据量非常大，xhr对象是分块接收数据的，一次性接收一部分（大小不确定），直至接收
 
@@ -1116,7 +1112,7 @@ xhr.send()；
 
 ```
 
-## 11.3 onprogress
+## onprogress
 
 progress -- 过程，进度
 
@@ -1168,7 +1164,7 @@ progress -- 过程，进度
 
 ```
 
-## 11.4 创建XHR对象的兼容方案
+## 创建XHR对象的兼容方案
 
 ​	XMLHttpRequest 在老版本浏览器（IE5/6）中有兼容问题，可以通过另外一种方式代替。
 
@@ -1178,7 +1174,7 @@ var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Micr
 
 ```
 
-## 11.5 responseType
+## responseType
 
 `responseType`，表示预期服务器返回的数据的类型，当设置了该属性后，通过 `response` 接收数据的时候，会
 
@@ -1209,7 +1205,7 @@ xhr.send();
 
 ```
 
-## 11.6 API小结
+## API小结
 
 - XHR 1 版 API
   - open -- 设置请求方式、请求url、同步或异步
@@ -1225,7 +1221,7 @@ xhr.send();
   - response ：可以接收任何的响应结果
   - responseType：配合response使用的一个属性
 
-# 12. jQuery 中封装的 AJAX
+# jQuery 中封装的 AJAX
 
 jQuery 中有一套专门针对 AJAX 的封装，功能十分完善，经常使用，需要着重注意。
 
@@ -1236,7 +1232,7 @@ jQuery 中有一套专门针对 AJAX 的封装，功能十分完善，经常使�
 > - http://www.jquery123.com/category/ajax/
 > - http://www.w3school.com.cn/jquery/jquery_ref_ajax.asp
 
-## 12.1 $.ajax
+## $.ajax
 
 基本的使用：
 
@@ -1283,7 +1279,7 @@ $.ajax({
 
 ```
 
-## 12.2 常用选项参数
+## 常用选项参数
 
 - cache: 设置ie浏览器的缓存问题， cache: false 不缓存
 - url：请求地址
@@ -1298,15 +1294,15 @@ $.ajax({
 - error：请求失败触发
 - processData：是否让jQuery帮我们将发送给服务器的数据进行处理（默认：true表示将对象处理成字符串）
 
-## 12.2 jQuery封装的快捷方法
+## jQuery封装的快捷方法
 
-### 	12.2.1 GET 请求快捷方法
+### 	GET 请求快捷方法
 
 `$.get(url, [data], [callback], [dataType])`
 
 `$.get({settings})`
 
-### 	12.2.2 POST 请求快捷方法
+### 	POST 请求快捷方法
 
 `$.post(url, [data], [callback], [dataType])`
 
@@ -1333,7 +1329,7 @@ $.ajax({
 
 ```
 
-## 12.3 Axios封装库
+## Axios封装库
 
 Axios 它是一个封装库，封装了ajax请求使用的一些方法。
 
@@ -1351,7 +1347,7 @@ Axios 它是一个封装库，封装了ajax请求使用的一些方法。
 </script>
 ```
 
-## 12.4 自己封装Ajax
+## 自己封装Ajax
 
 自己封装的目的是为了**提高编程能力，锻炼逻辑思维能力**。另外封装Ajax还能体会到==回调函数==的作用，即使用回调函数来处理异步请求的结果。
 
@@ -1392,7 +1388,7 @@ ajax('POST', '/addMsg', 'name=zs&content=lisi', function (res) {
 });
 ```
 
-## 12.5 全局事件处理
+## 全局事件处理
 
 ​	每次Ajax请求都需要的事件，比如给一个请求响应过程进度提示，可以使用全局事件处理。反过来说，通过
 
@@ -1435,7 +1431,7 @@ ajax('POST', '/addMsg', 'name=zs&content=lisi', function (res) {
 
 简单概括以上方法的作用和基本用法。
 
-# 13.H5新增FormData对象(重点)
+# H5新增FormData对象(重点)
 
 Date() -- 日期
 
@@ -1644,9 +1640,9 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
 
 # Ajax综合案例-会员功能
 
-## 1. 用到的接口列表
+## 用到的接口列表
 
-### 1.1 GET /api/member-list
+### GET /api/member-list
 
 获取会员数据列表，返回数组
 
@@ -1655,7 +1651,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
 - page: 如果传递 page，则分页获取指定页的 6 条数据
 - last: 如果传递 last，则获取指定 ID 之后的 6 条数据
 
-### 1.2 GET /api/member-detail
+### GET /api/member-detail
 
 获取指定 ID 对应的数据
 
@@ -1663,7 +1659,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
 
 - id: 需要获取的数据 ID
 
-### 1.3 GET /api/member-delete
+### GET /api/member-delete
 
 根据id删除数据
 
@@ -1671,7 +1667,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
 
 - id: 需要根据id删除
 
-### 1.4 POST /api/member-add
+### POST /api/member-add
 
 添加一个新的会员
 
@@ -1681,7 +1677,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
 - bio: 会员简介
 - avatar: 头像文件
 
-### 1.5 GET /api/member-list-last
+### GET /api/member-list-last
 
 获取下拉分页数据
 
@@ -1689,7 +1685,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
 
 - last: 如果为null，默认获取第一页数据；如果需要获取下一页的数据，则需要传递当前已显示的会员中的最后一个会员的id
 
-## 2. 实现会员列表功能
+## 实现会员列表功能
 
 删除public里面的index.html 、add.html 、detail.html、index-data.html。
 
@@ -1743,7 +1739,7 @@ $.get('/api/member-list-last', {last: null}, function (res) {
 
 > 调用 `/api/menber-list` 接口获取的是全部会员，加载的时候非常慢，所以可以使用 `/api/member-list-last`接口，该接口只获取6个会员，这样刷新页面后，只会看到最新的6个会员，加载速度比较快。
 
-## 3. 实现查看会员详细信息
+## 实现查看会员详细信息
 
 1. 点击 “View” 超链接，跳转到 `/detail.html` ，跳转时**一定要携带**该会员的id
 
@@ -1798,7 +1794,7 @@ $.get('/api/member-list-last', {last: null}, function (res) {
     }, 'json');
 ```
 
-## 4. 实现删除会员功能
+## 实现删除会员功能
 
 1. 点击超链接不能跳转，设置href属性为javascript:;
 
@@ -1839,7 +1835,7 @@ $.get('/api/member-list-last', {last: null}, function (res) {
     });
 ```
 
-## 5. 实现新增会员功能
+## 实现新增会员功能
 
 1. 点击index.html中的“New Member”超链接，跳转到add.html
 
@@ -1917,7 +1913,7 @@ $.get('/api/member-list-last', {last: null}, function (res) {
       });
   ```
 
-## 6. 实现加载更多功能
+## 实现加载更多功能
 
 思路：当滚动条快接近底部的时候。然后去加载下一页的数据。所以第一：找到滚动条快接近底部的条件；第二分析如何去加载下一页的数据；
 
