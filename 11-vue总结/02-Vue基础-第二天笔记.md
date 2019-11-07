@@ -355,7 +355,7 @@
 >filters: {
 >     toUpper(value) {
 >       return value.charAt(0).toUpperCase() + value.substr(1);
->     }
+>       }
 >   }
 >```
 >

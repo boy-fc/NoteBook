@@ -923,3 +923,4 @@ Vue.directive("focus", {
 - data 是一个函数 带返回值的函数   返回值是一个对象 对象里面的内容就是我们的data数据
 - 每个组件之间都是独立的作用域 
 - Vue.component("组件名称",{    template:data(){} ,methods })abc  abc-d(全小写)
+

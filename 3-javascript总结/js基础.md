@@ -147,7 +147,7 @@
 				console.log(a);// 输出undefined
 ```
 
-### 		3.2 查看数据类型
+### 		查看数据类型
 
 ```js
 				typeof 数据;
@@ -444,7 +444,7 @@
 ```js
 			for(初始化表达式; 条件表达式; 自增表达式){
   				循环体
-			}
+			}7
 ```
 
 #### 			do-while循环
@@ -1355,7 +1355,7 @@ stringObject.substr(start,length)
   				});
 ```
 
-###### 		 				filter:数组过滤
+###### 		 				filter:数组过滤  
 
 ```js
   				// filter:数组过滤：满足条件返出来，返每个元素，返到新数组；
