@@ -1037,6 +1037,14 @@ MVP模式【是从MVC模式演变而来的，都是通过Controller/Presenter负
 
 # MVVM模式【Model+View+ViewModel】
 
+![image-20191112110144368](CSDN-前端面试总结.assets/image-20191112110144368.png)
+
+![image-20191112110239501](CSDN-前端面试总结.assets/image-20191112110239501.png)
+
+
+
+
+
 MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewModel；View的变化会自动更新到ViewModel,ViewModel的变化也会自动同步到View上显示。这种自动同步是因为ViewModel中的属性实现了Observer，当属性变更时都能触发对应的操作。
 
 Vue框架【MVVM】
